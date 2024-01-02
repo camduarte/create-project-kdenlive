@@ -8,14 +8,14 @@ if [ $# -eq 1 ]
   then
     echo "...Creating project"
 
-    mkdir -p ${1}/Videos/Cam ${1}/Videos/Clips ${1}/Images ${1}/Images/Thumbnail ${1}/Audios/Effects ${1}/Audios/Music ${1}/Audios/Voice ${1}/Audios/Audacity ${1}/Screenplay ${1}/Project
+    mkdir -p ${1}/Videos/Cam ${1}/Videos/Clips ${1}/Videos/Render ${1}/Images ${1}/Images/Thumbnail ${1}/Audios/Effects ${1}/Audios/Music ${1}/Audios/Voice ${1}/Audios/Audacity ${1}/Screenplay ${1}/Kdenlive-Project
 
     touch ${1}/Screenplay/screenplay
     cp ./resources/Videos/Clips/* ${1}/Videos/Clips/
     cp ./resources/Images/* ${1}/Images/
     cp ./resources/Audio/Music/* ${1}/Audios/Music/
     cp ./resources/Audio/Voice/* ${1}/Audios/Music/Voice/
-    cp ./resources/Project/ejemplo.kdenlive ${1}/Project/${1}.kdenlive
+    cp ./resources/kdenlive-Project/ejemplo.kdenlive ${1}/Kdenlive-Project/${1}.kdenlive
     cp ./resources/Thumbnail/thumbnail.xcf ${1}/Images/Thumbnail/
 
     statuscode=${?}
