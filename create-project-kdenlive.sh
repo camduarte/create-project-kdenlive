@@ -8,15 +8,15 @@ if [ $# -eq 1 ]
   then
     echo "...Creating project"
 
-    mkdir -p ${1}/Videos/Cam ${1}/Videos/Clips ${1}/Videos/Render ${1}/Images ${1}/Images/Thumbnail ${1}/Audios/Effects ${1}/Audios/Music ${1}/Audios/Voice ${1}/Audios/Audacity ${1}/Screenplay ${1}/Kdenlive-Project
+    mkdir -p ${1}/Video/Cam ${1}/Video/Clip ${1}/Video/Render ${1}/Image ${1}/Image/Thumbnail ${1}/Audio/Effects ${1}/Audio/Music ${1}/Audio/Voice ${1}/Audio/Audacity ${1}/Screenplay ${1}/Kdenlive-Project
 
     touch ${1}/Screenplay/screenplay
-    cp ./resources/Videos/Clips/* ${1}/Videos/Clips/
-    cp ./resources/Images/* ${1}/Images/
-    cp ./resources/Audio/Music/* ${1}/Audios/Music/
-    cp ./resources/Audio/Voice/* ${1}/Audios/Music/Voice/
-    cp ./resources/kdenlive-Project/ejemplo.kdenlive ${1}/Kdenlive-Project/${1}.kdenlive
-    cp ./resources/Thumbnail/thumbnail.xcf ${1}/Images/Thumbnail/
+    cp -r ./resource/Video/Clip/* ${1}/Video/Clip/
+    cp -r ./resource/Image/* ${1}/Image/
+    cp -r ./resource/Audio/Music/* ${1}/Audio/Music/
+    cp -r ./resource/Audio/Voice/* ${1}/Audio/Voice/
+    cp ./resource/Kdenlive-Project/example.kdenlive ${1}/Kdenlive-Project/${1}.kdenlive
+    cp ./resource/Thumbnail/thumbnail.xcf ${1}/Image/Thumbnail/
 
     statuscode=${?}
     tree ${1}
